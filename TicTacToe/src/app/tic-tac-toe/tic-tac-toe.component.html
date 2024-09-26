@@ -1,0 +1,9 @@
+<div class="board" [style.gridTemplateColumns]="gridTemplateColumns">
+  <div *ngFor="let row of cells; let y = index">
+    <div *ngFor="let cell of row; let x = index" class="cell" (click)="handleCellClick(x, y)">
+      {{ cell }}
+    </div>
+  </div>
+</div>
+<p>{{ message }}</p>
+<button (click)="resetGame()">Reset</button>
